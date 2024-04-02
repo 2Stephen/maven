@@ -51,5 +51,36 @@
 
     [mvnrepository官网](https://mvnrepository.com)
 
+2.maven仓库配置
 
-2.maven
++ 默认在.m2位置，修改位置需要在conf/settings.xml修改
+
++ 镜像仓库配置：conf/settings.xml修改
+
+  ```xml
+  <mirror>
+        <id>nexus-aliyun</id> 
+        <mirrorOf>central</mirrorOf>
+        <name>Nexus aliyun</name>
+        <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+  </mirror>
+  ```
+
+  + id：唯一标识符
+  + mirrorOf：镜像仓库类型 central中央仓库
+
+## ch-04
+
+1.maven项目框架：
+
++ src
+  + main
+    + java
+    + resources
+  + test
+    + java
+    + resources
++ pom.xml
+
+2.
+
