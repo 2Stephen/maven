@@ -67,20 +67,48 @@
   ```
 
   + id：唯一标识符
-  + mirrorOf：镜像仓库类型 central中央仓库
+  + mirrorOf：镜像仓库类型 其中central为中央仓库
 
 ## ch-04
 
 1.maven项目框架：
 
 + src
-  + main
+  + main //编写主程序
     + java
     + resources
-  + test
+  + test //测试用
     + java
     + resources
-+ pom.xml
++ pom.xml //存放配置信息
 
-2.
+2.maven dos命令
+
++ mvn compile //编译mvn程序，编译主程序为class字节码文件
++ mvn clean //清理编译完成的文件
++ mvn test //测试用，测试后生成测试报告
++ mvn package //打包用。会先执行编译，再测试，后打包
++ mvn install //将打包后的jar包安装于maven仓库
+
+## ch-05
+
+1.插件创建工程
+
+```bash
+mvn archetype:generate
+	-DgroupId={project-packaging}
+	-DartifactId={project-name}
+	-DarchetypeArtifactId=maven-archetype-quickstart
+	-DinteractiveMode=false
+```
+
++ DarchetypeArtifactId可选：
+  + maven-archetype-quickstart：java项目
+  + maven-archetype-webapp：web项目，比Java项目多web目录，且打包方式为war
+
+2.idea创建工程
+
+idea已经集成maven，无需复杂操作
+
+在maven archetype中选择quickstart即可
 
